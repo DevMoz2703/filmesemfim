@@ -9,7 +9,7 @@ function pesquisarFilme(e) {
 
 function buscarFilmes(filmePesquisa) {
     const apiKey = 'e5014d23'; // Sua chave de API OMDB
-    const apiUrl = `http://www.omdbapi.com/?s=${filmePesquisa}&apikey=${apiKey}`;
+    const apiUrl = `https://www.omdbapi.com/?s=${filmePesquisa}&apikey=${apiKey}`;
 
     axios.get(apiUrl)
         .then(function (response) {
@@ -55,7 +55,7 @@ function mostraFilme() {
     const filmeID = sessionStorage.getItem('filmeID');
 
     const apiKey = 'e5014d23'; // Sua chave de API OMDB
-    const apiUrl = `http://www.omdbapi.com/?i=${filmeID}&apikey=${apiKey}`;
+    const apiUrl = `https://www.omdbapi.com/?i=${filmeID}&apikey=${apiKey}`;
 
     axios.get(apiUrl)
     .then(function (response) {
@@ -82,7 +82,7 @@ function mostraFilme() {
                 <h3>Descrição</h3>
                 ${filme.Plot}
                 <hr>
-                <a href="http://imdb.com/title/${filme.imdbID}" target="_blank" class="btn btn-success" pull-left>Ver no IMDB</a>
+                <a href="https://imdb.com/title/${filme.imdbID}" target="_blank" class="btn btn-success" pull-left>Ver no IMDB</a>
                 <a href="index.html" target="_blank" class="btn btn-default" pull-right>Pesquisar outro</a>
            </div> 
         </div>
